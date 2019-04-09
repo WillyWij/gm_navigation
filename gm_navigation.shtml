@@ -1,0 +1,96 @@
+<div class="gm-widget-container relative" style="display:none">
+	<div class="gm-widget-navigation display-table">
+		<div class="widget-container__close">
+		</div>
+	    <div class="widget-container__icon">
+	        <img src='{{ GetImage .ShopTypeLogo }}' alt="{{ .ShopType }}" class="gold-icon">
+	    </div>
+	    <div class="widget-container__text">
+			{{ Loc "Use Features of" }} <br/><strong>{{ .ShopTypeName }}</strong>
+	    </div>
+	</div>
+    <div class="widget-bubble-container relative">
+    	<div class="widget-bubble__wrapper">
+    		<ul class="widget-bubble__content clearfix" id="gm-nav-shop-content">
+	    		<li id="nav-statistic">
+	    			<a href='{{ GetSecureUri "manage-gmstat-dashboard.pl" false .Param }}' class="pull-left">
+	    				<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-statistic-img"></span>
+		    			</span>
+		    			<p class="m-0">
+                            {{ Loc "Statistic" }}
+		    			</p>
+	    			</a>
+	    		</li>
+	    		<li id="nav-featured-product">
+	    			<a href='{{ GetSecureUri "myshop-featuredprod.pl" false .Param }}' class="pull-left">
+		    			<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-featured-product-img"></span>
+		    			</span>
+		    			<p class="m-0">
+                            {{ Loc "Featured Product" }}
+		    			</p>
+		    		</a>
+	    		</li>
+	    		<li id="nav-showcase">
+	    			<a href='{{ GetSecureUri "myshop-etalase.pl" false .Param }}' class="pull-left">
+		    			<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-showcase-img"></span>
+		    			</span>
+		    			<p class="m-0">
+                            {{ Loc "Showcase" }}
+		    			</p>
+		    		</a>
+	    		</li>
+	    		<li id="nav-admin">
+	    			<a href='{{ GetSecureUri "user-management.pl" false .Param }}' class="pull-left">
+		    			<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-admin-img"></span>
+		    			</span>
+		    			<p class="m-0">
+                            {{ Loc "Shop Admin" }}
+		    			</p>
+		    		</a>
+	    		</li>
+	    		<li id="nav-cover">
+	    			<a href='{{ GetSecureUri "myshop-editor.pl" false .Param }}' class="pull-left">
+		    			<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-cover-img"></span>
+		    			</span>
+		    			<p class="m-0">
+                            {{ Loc "Shop Cover" }}
+		    			</p>
+		    		</a>
+	    		</li>
+	    		<li id="nav-cashback">
+	    			<a href='{{ GetSecureUri "manage-product-new.pl" false .Param }}' class="pull-left">
+		    			<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-cashback-img"></span>
+		    			</span>
+		    			<p class="m-0">
+		    				Cashback
+		    			</p>
+		    		</a>
+	    		</li>
+	    		<li id="nav-oppor">
+	    			<a href='{{ GetSecureUri "peluang.pl" false .Param }}' class="pull-left">
+		    			<span class="widget-bubble__item">
+		    				<span class="nav-item__img" id="nav-oppor-img"></span>
+		    			</span>
+		    			<p class="m-0">
+                            {{ Loc "Opportunity" }}
+		    			</p>
+		    		</a>
+	    		</li>
+	    	</ul>
+    	</div>
+	</div>
+	<div class="gm-welcome-bubble-container relative">
+		<a href="#" class="gm-bubble-btn-close"></a>
+		<div class="gm-welcome-bubble__wrapper">
+			{{ Loc "Use Gold Merchant Features" }}
+		</div>
+	</div>
+</div>
+{{minlink "gm-widget-navigation-css"}}
+{{minscript "gm-widget-navigation-js"}}
